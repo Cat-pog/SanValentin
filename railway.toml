@@ -1,0 +1,18 @@
+# railway.toml
+
+[build]
+  builder = "NIXPACKS"
+  # Si necesitas ejecutar comandos personalizados durante el proceso de construcción
+  build_command = "npm install --legacy-peer-deps && npm run build"
+
+[deploy]
+  runtime = "V2"
+  numReplicas = 1
+  sleepApplication = false
+
+  [[deploy.multiRegionConfig]]
+    region = "us-west1"
+    numReplicas = 1
+
+  restartPolicyType = "ON_FAILURE"
+  restartPolicyMaxRetries = 10
