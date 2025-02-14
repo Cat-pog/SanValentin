@@ -1,0 +1,9 @@
+# Normalizar finales de línea
+* text=auto
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.mjs text eol=lf
+.gitignore text eol=lf
