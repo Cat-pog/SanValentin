@@ -2,12 +2,15 @@
   "$schema": "https://railway.com/railway.schema.json",
   "build": {
     "builder": "NIXPACKS",
-    "prebuild": "npm cache clean --force && npm install --legacy-peer-deps"
+    "commands": [
+      "npm install --legacy-peer-deps",  // Instala las dependencias forzando el uso de dependencias de los pares
+      "npm run build"                    // Ejecuta el build después de instalar las dependencias
+    ]
   },
   "deploy": {
     "runtime": "V2",
     "numReplicas": 1,
-    "sleepApplication": false,
+    "sleepApplication": false,         // Desactiva el modo de reposo si es necesario
     "multiRegionConfig": {
       "us-west1": {
         "numReplicas": 1
