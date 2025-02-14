@@ -3,14 +3,14 @@
   "build": {
     "builder": "NIXPACKS",
     "commands": [
-      "npm install --legacy-peer-deps",  // Instala las dependencias forzando el uso de dependencias de los pares
-      "npm run build"                    // Ejecuta el build después de instalar las dependencias
+      "npm install --legacy-peer-deps",  
+      "npm run build"                  
     ]
   },
   "deploy": {
     "runtime": "V2",
     "numReplicas": 1,
-    "sleepApplication": false,         // Desactiva el modo de reposo si es necesario
+    "sleepApplication": false,     
     "multiRegionConfig": {
       "us-west1": {
         "numReplicas": 1
